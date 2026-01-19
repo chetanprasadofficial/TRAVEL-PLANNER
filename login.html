@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YatraVerse - Login</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hidden-field {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-route"></i> YatraVerse</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="form-wrapper">
+            <h2 class="text-center mb-4 text-primary" id="formTitle">Explorer Login</h2>
+
+            <form onsubmit="event.preventDefault(); handleAuth();">
+                <!-- Registration Fields -->
+                <div id="regFields" class="hidden-field">
+                    <div class="form-group mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="John Doe">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="form-label">Contact Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="+91 9876543210">
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Enter Pilot Name" required>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Secret Key" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%" id="authBtn">Initialize
+                    Session</button>
+            </form>
+
+            <div class="text-center mt-4">
+                <p id="toggleText" style="cursor: pointer; color: var(--secondary);" onclick="toggleAuthMode()">
+                    New Recruit? <span style="text-decoration: underline;">Register Here</span>
+                </p>
+                <p id="forgotLink" class="mt-2" style="cursor: pointer; color: var(--text-muted); font-size: 0.9rem;"
+                    onclick="toggleRecovery()">
+                    Forgot Password?
+                </p>
+            </div>
+
+            <!-- Recovery Form -->
+            <div id="recoverySection" class="hidden-field mt-4"
+                style="border-top: 1px solid var(--border); padding-top: 20px;">
+                <h3 class="text-center text-primary mb-3">Identity Verification</h3>
+                <form onsubmit="event.preventDefault(); handleRecovery();">
+                    <div class="form-group mb-3">
+                        <label class="form-label">Codename (Username)</label>
+                        <input type="text" id="recUser" class="form-control" placeholder="Enter Username">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="form-label">Registered Phone</label>
+                        <input type="tel" id="recPhone" class="form-control" placeholder="Enter Phone Number">
+                    </div>
+                    <button type="submit" class="btn btn-warning" style="width:100%">Recover Access</button>
+                    <p class="text-center mt-3" style="cursor: pointer; color: var(--text-muted);"
+                        onclick="toggleRecovery()">
+                        Cancel
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- UI Scripts -->
+    <script src="script.js"></script>
+    <script>
+        let isLogin = true;
+
+        function toggleAuthMode() {
+            // Hide recovery if open
+            document.getElementById('recoverySection').classList.add('hidden-field');
+            document.getElementById('forgotLink').style.display = 'block';
+
+            isLogin = !isLogin;
+            const title = document.getElementById('formTitle');
+            const btn = document.getElementById('authBtn');
+            const toggle = document.getElementById('toggleText');
+            const regFields = document.getElementById('regFields');
+            const forgotLink = document.getElementById('forgotLink');
+
+            if (isLogin) {
+                // Login Mode
+                title.innerText = "Explorer Login";
+                btn.innerText = "Initialize Session";
+                toggle.innerHTML = "New Recruit? <span style='text-decoration: underline;'>Register Here</span>";
+                regFields.classList.add('hidden-field');
+                forgotLink.style.display = 'block';
+
+                document.getElementById('fullName').required = false;
+                document.getElementById('phone').required = false;
+            } else {
+                // Register Mode
+                title.innerText = "New Registration";
+                btn.innerText = "Create Identity";
+                toggle.innerHTML = "Already a Pilot? <span style='text-decoration: underline;'>Login Here</span>";
+                regFields.classList.remove('hidden-field');
+                forgotLink.style.display = 'none'; // Hide forgot link in register mode
+
+                document.getElementById('fullName').required = true;
+                document.getElementById('phone').required = true;
+            }
+        }
+
+        function toggleRecovery() {
+            const form = document.getElementById('recoverySection');
+            const link = document.getElementById('forgotLink');
+
+            if (form.classList.contains('hidden-field')) {
+                form.classList.remove('hidden-field');
+                link.style.display = 'none';
+            } else {
+                form.classList.add('hidden-field');
+                link.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

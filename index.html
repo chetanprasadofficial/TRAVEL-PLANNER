@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YatraVerse - Home</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section Padding for Anchor Linking */
+        section {
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-route"></i> YatraVerse
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- Auth Links injected by script.js -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Explore the World with YatraVerse</h1>
+            <p>Your intelligent companion for smarter, easier, and better travel planning.</p>
+            <a href="dashboard.html" class="btn btn-warning">Start Planning</a>
+        </div>
+    </header>
+
+    <!-- Popular Section (Was part of Home) -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Popular Categories</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <img src="assets/images/beach.png" alt="Beach">
+                    <div class="card-body">
+                        <h3 class="card-title">Beach Vacations</h3>
+                        <p>Relax by the ocean.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/mountain.png" alt="Mountain">
+                    <div class="card-body">
+                        <h3 class="card-title">Mountain Adventures</h3>
+                        <p>Trekking and snow.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/city.png" alt="City">
+                    <div class="card-body">
+                        <h3 class="card-title">City Tours</h3>
+                        <p>Modern vibes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANS SECTION (Consolidated from plans.html) -->
+    <section id="plans">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--secondary); text-shadow: 0 0 10px var(--secondary);">🇮🇳
+                Hidden Gems of Bihar</h2>
+            <div class="grid-3 mb-5">
+                <div class="card">
+                    <img src="assets/images/culture.png" alt="Bodh Gaya">
+                    <div class="card-body">
+                        <h3 class="card-title">Bodh Gaya</h3>
+                        <p>Experience spiritual enlightenment at the Mahabodhi Temple. A peaceful retreat.</p>
+                        <a href="dashboard.html" class="btn btn-primary mt-3">Plan This</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/culture.png" alt="Nalanda">
+                    <div class="card-body">
+                        <h3 class="card-title">Nalanda & Rajgir</h3>
+                        <p>Walk through the ruins of the ancient university and the cyclopean wall.</p>
+                        <a href="dashboard.html" class="btn btn-primary mt-3">Plan This</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/mountain.png" alt="Valmiki Nagar">
+                    <div class="card-body">
+                        <h3 class="card-title">Valmiki Tiger Reserve</h3>
+                        <p>For nature lovers. Diverse flora and fauna in the Himalayan foothills.</p>
+                        <a href="dashboard.html" class="btn btn-primary mt-3">Plan This</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-center mb-5" style="color: var(--primary); text-shadow: 0 0 10px var(--primary);">✈️
+                International Gateways</h2>
+            <div class="grid-3 mb-5">
+                <div class="card">
+                    <img src="assets/images/city.png" alt="Dubai">
+                    <div class="card-body">
+                        <h3 class="card-title">Dubai, UAE</h3>
+                        <p>The city of the future. Burj Khalifa, Desert Safari, and luxury shopping.</p>
+                        <a href="dashboard.html" class="btn btn-primary mt-3">Plan This</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/beach.png" alt="Maldives">
+                    <div class="card-body">
+                        <h3 class="card-title">The Maldives</h3>
+                        <p>Crystal clear waters and overwater villas. The ultimate island escape.</p>
+                        <a href="dashboard.html" class="btn btn-primary mt-3">Plan This</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/hero.png" alt="Kyoto">
+                    <div class="card-body">
+                        <h3 class="card-title">Kyoto, Japan</h3>
+                        <p>Cherry blossoms, ancient temples, and traditional tea ceremonies.</p>
+                        <a href="dashboard.html" class="btn btn-primary mt-3">Plan This</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION (Consolidated from gallery.html) -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="text-center mb-5">Travel Gallery</h2>
+            <div class="grid-3">
+                <div class="card"><img src="assets/images/taj.png" alt="Taj Mahal"></div>
+                <div class="card"><img src="assets/images/mountain.png" alt="Mountains"></div>
+                <div class="card"><img src="assets/images/city.png" alt="City"></div>
+                <div class="card"><img src="assets/images/culture.png" alt="Culture"></div>
+                <div class="card"><img src="assets/images/beach.png" alt="Beach"></div>
+                <div class="card"><img src="assets/images/hero.png" alt="Travel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION (Consolidated from about.html) -->
+    <section id="about">
+        <div class="container text-center">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 class="mb-4">About YatraVerse</h2>
+                <p style="font-size: 1.2rem; margin-top: 1rem;">YatraVerse is a smart travel companion project designed
+                    to help users plan trips efficiently.</p>
+                <div style="margin: 2rem 0; height: 1px; background: #ddd;"></div>
+                <div style="text-align: left;">
+                    <h3 style="margin-bottom: 1rem;">Technologies Used:</h3>
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li>HTML5 & CSS3 (Custom Grid/Flexbox)</li>
+                        <li>Vanilla JavaScript (No Frameworks)</li>
+                        <li>OpenWeatherMap API (Real-time Data)</li>
+                    </ul>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Future Scope:</h3>
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li>User Authentication System</li>
+                        <li>Backend Database (MongoDB)</li>
+                        <li>Live Flight Booking Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Made with ❤️ by CrownX for College Project</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
