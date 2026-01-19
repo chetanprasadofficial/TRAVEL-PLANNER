@@ -1,23 +1,14 @@
-/* YatraVerse Futuristic Styles (Dark Cyberpunk Theme) */
-
-/* 1. Reset & Variables */
 :root {
     --primary: #00f3ff;
-    /* Neon Cyan */
     --secondary: #bc13fe;
-    /* Neon Purple */
     --accent: #ff0055;
-    /* Neon Pink */
     --bg-dark: #050a14;
-    /* Deep Space Blue */
     --glass: rgba(255, 255, 255, 0.05);
     --border: rgba(0, 243, 255, 0.2);
     --text-main: #e0faff;
     --text-muted: #8a9bbd;
-
     --font-head: 'Orbitron', get_sans-serif;
     --font-body: 'Rajdhani', sans-serif;
-
     --radius: 12px;
     --glow: 0 0 10px rgba(0, 243, 255, 0.5);
 }
@@ -65,7 +56,6 @@ img {
     border-radius: var(--radius);
 }
 
-/* 2. Layout & Grid */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -95,7 +85,6 @@ img {
     margin-bottom: 3rem;
 }
 
-/* 3. Navbar */
 .navbar {
     background: rgba(5, 10, 20, 0.8);
     backdrop-filter: blur(10px);
@@ -145,12 +134,10 @@ img {
     color: var(--primary);
 }
 
-/* 4. Glassmorphism Buttons */
 .btn {
     display: inline-block;
     padding: 12px 30px;
     border-radius: 50px;
-    /* Pill shape for futuristic look */
     font-family: var(--font-head);
     font-size: 0.9rem;
     cursor: pointer;
@@ -180,7 +167,6 @@ img {
     box-shadow: 0 0 20px var(--secondary);
 }
 
-/* 5. Hero Section */
 .hero {
     height: 80vh;
     background: url('assets/images/hero.png') no-repeat center center/cover;
@@ -229,7 +215,6 @@ img {
     color: var(--text-main);
 }
 
-/* 6. Glass Cards */
 .card {
     background: var(--glass);
     backdrop-filter: blur(10px);
@@ -255,7 +240,6 @@ img {
     margin-bottom: 0.5rem;
 }
 
-/* 7. Forms & Inputs */
 .form-wrapper {
     background: var(--glass);
     backdrop-filter: blur(10px);
@@ -292,7 +276,6 @@ img {
     box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
 }
 
-/* 8. Utility & Results */
 .result-box,
 .weather-result,
 .budget-result {
@@ -309,7 +292,6 @@ img {
     from {
         box-shadow: 0 0 5px rgba(0, 243, 255, 0.2);
     }
-
     to {
         box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
     }
@@ -323,7 +305,6 @@ img {
     border-radius: 0 var(--radius) var(--radius) 0;
 }
 
-/* Footer */
 footer {
     border-top: 1px solid var(--border);
     padding: 2rem;
@@ -333,7 +314,6 @@ footer {
     color: var(--text-muted);
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
